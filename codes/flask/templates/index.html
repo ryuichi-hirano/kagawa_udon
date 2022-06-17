@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block list %}
+							<li><a href="#top">TOP</a></li>
+							<li><a href="#sec01">MESSAGE</a></li>
+							<li><a href="#sec02">SIGHTSEEING</a></li>
+							<li><a href="#sec03">UDON</a></li>
+							<li><a href="/udon_nearby">UDON NEAR BY</a></li>
+							<li><a href="/spot_nearby">SPOT NEAR BY</a></li>
+{% endblock %}
+
+{% block content %}
+<!-- MESSAGE -->
+			<section id="sec01">
+				<header>
+					<h2><span>MESSAGE</span></h2>
+				</header>
+				<div class="innerS">
+					うどん県ならではの観光とうどんとの調和。その体験をする計画をここで立てませんか？
+				</div>
+			</section>
+			<!-- // MESSAGE -->
+			<!-- GALLERY -->
+			<section id="sec02">
+				<header>
+					<h2><span>SIGHTSEEING</span></h2>
+				</header>
+				<div>
+					{{ map_s | safe }}
+				</div>
+			</section>
+			<!-- // GALLERY -->
+			<!-- BRAND -->
+			<section id="sec03">
+				<header>
+					<h2><span>UDON</span></h2>
+				</header>
+				<div>
+					{{ map_u | safe }}
+				</div>
+			</section>
+			<!-- // BRAND -->
+{% endblock %}

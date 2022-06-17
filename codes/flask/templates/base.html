@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="香川うどん旅行">
+	<meta name="viewport" content="width=device-width">
+	<title>Udon world Kagawa</title>
+</head>
+
+<body id="top">
+	<div id="wrapper">
+
+		<div id="sidebar">
+			<div id="sidebarWrap">
+				<h1>香川うどん旅</h1>
+				<nav id="mainnav">
+					<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+					<div class="panel">
+                        <ul>
+                        {% block list %}
+                        {% endblock %}
+                        </ul>
+                    </div>
+				</nav>
+			</div>
+		</div>
+
+        <div id="content">
+
+            {% block content %}
+            {% endblock %}
+
+
+			<footer id="footer">
+				© 2022 Ryuichi Hirano
+			</footer>
+
+		</div>
+	</div>
+
+</body>
+</html>
