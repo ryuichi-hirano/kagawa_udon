@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block list %}
+<link rel="stylesheet" href="../static/base.css">
+<ul class="inpage">
+							<li><a href="#top">TOP</a></li>
+							<li><a href="#sec02">SIGHTSEEING</a></li>
+							<li><a href="#sec03">UDON</a></li>
+</ul>
+<ul class="link">
+							<li><a href="/udon_nearby">UDON NEAR BY</a></li>
+							<li><a href="/spot_nearby">SPOT NEAR BY</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+			<section id="sec02">
+				<header>
+					<h2><span>SIGHTSEEING LIST</span></h2>
+				</header>
+				<div class="map">
+					{{ map_s | safe }}
+				</div>
+			</section>
+			<section id="sec03">
+				<header>
+					<h2><span>UDON LIST</span></h2>
+				</header>
+				<div class="map">
+					{{ map_u | safe }}
+				</div>
+			</section>
+{% endblock %}

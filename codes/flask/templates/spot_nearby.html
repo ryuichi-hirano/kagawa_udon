@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block list %}
+<link rel="stylesheet" href="../static/base.css">
+<ul>
+							<li><a href="/">TOP</a></li>
+                            <li><a href="/udon_nearby">UDON NEAR BY SPOT</a></li>
+                            <li><a href="#sec01">SPOT NEAR BY UDON SHOP</a></li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/base.css">
+			<section id="sec01">
+				<header>
+					<h2><span>SPOT NEAR BY UDON SHOP</span></h2>
+				</header>
+				<div>
+					うどんはどうでしたか？近くで観光して戻りませんか？
+				</div>
+                <body>
+                    <form action="/spot_nearby" method="POST">
+                    <p>
+                        UDON SHOPを選択してください。
+                        <select name="udon_shop_" id="udon">
+                            {% for i in udon_shop %}
+                            <option value="{{ i }}">{{ i }}</option>
+                            {% endfor %}
+                        </select>
+                    </p>
+                    <p><input type="submit" value="決定"></p>
+                    </form>
+                    <div class="shops">
+                    <h2>SIGHTSEEING near by the udon shop</h2>
+                    </div>
+                    <div class="map">
+                        {{ map_u | safe}}
+                    </div>
+                </body>
+			</section>
+{% endblock %}
